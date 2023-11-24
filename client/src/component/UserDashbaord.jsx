@@ -67,7 +67,7 @@ const UserDashbaord = () => {
                   <NavLink onClick={logout}>Logout</NavLink>
                 </li>
                 <li className="float-end">
-                    <NavLink to="/">{user?.name}</NavLink>
+                    {/* <NavLink to="/">{user?.name}</NavLink> */}
                 </li>
               </ul>
             </div>
