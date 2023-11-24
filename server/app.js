@@ -4,6 +4,13 @@ const app = express();
 require("./config/db"); // DataBase import
 
 const bodyparser = require("body-parser");
+const path=require('path')
+
+// static file
+app.use(express.static(path.join(__dirname,'../client/build')))
+app.get('*',function(req,resp){
+      resp.sendFile(path.join(__dirname,'../client/build/index.html'))
+})
 
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use(bodyparser.json());
